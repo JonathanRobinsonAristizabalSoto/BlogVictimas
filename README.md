@@ -1,6 +1,6 @@
 # Blog Víctimas del Conflicto en Colombia
 
-![Logo](https://via.placeholder.com/150)
+![Logo](assets/images/logovictimas.png)
 
 ## Introducción
 Este blog está dedicado a las víctimas del conflicto armado en Colombia. Nuestro objetivo es dar voz a aquellos que han sufrido y siguen sufriendo las consecuencias de la violencia. A través de historias personales, estadísticas y análisis, buscamos crear conciencia y promover la paz y la justicia.
@@ -49,5 +49,3 @@ Realizamos entrevistas con expertos, víctimas y activistas. Aquí hay una muest
 Esperamos que este blog sirva como una plataforma para la reflexión y el diálogo sobre el conflicto armado en Colombia. Invitamos a nuestros lectores a participar, compartir sus historias y contribuir a la construcción de una Colombia en paz.
 
 ---
-
-![Footer Image](https://via.placeholder.com/150)
