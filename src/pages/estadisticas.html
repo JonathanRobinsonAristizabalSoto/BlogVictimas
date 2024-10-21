@@ -20,8 +20,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <title>Blog Estadisticas del conflicto Armado</title>
+    <title>Blog Estadísticas del Conflicto Armado</title>
     <script src="../../assets/js/jquery.min.js"></script>
+
+    <!-- librería Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      /* Asegurando que los gráficos sean responsivos */
+      canvas {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Ajustes adicionales para móviles */
+      @media (max-width: 768px) {
+        h2, h3 {
+          font-size: 1.5em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -57,13 +79,28 @@
     <!-- main -->
     <main>
       <section>
-        <h2 class="libre-baskerville-bold">Estadisticas del conflicto Armado</h2>
+        <h2 class="libre-baskerville-bold">Estadísticas del Conflicto Armado</h2>
         <p class="libre-baskerville-regular">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          deserunt vel reiciendis, assumenda, ab quae sint quis nobis deleniti
-          ad explicabo suscipit unde illum quasi obcaecati quod numquam, rerum
-          beatae!
+          A continuación se presentan estadísticas sobre víctimas del conflicto armado a nivel mundial, nacional (Colombia) y local (Manizales).
         </p>
+
+        <!-- Gráfico de barras a nivel mundial -->
+        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Nivel Mundial</h3>
+        <div class="chart-container">
+          <canvas id="worldChart"></canvas>
+        </div>
+
+        <!-- Gráfico de barras a nivel nacional (Colombia) -->
+        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Colombia</h3>
+        <div class="chart-container">
+          <canvas id="colombiaChart"></canvas>
+        </div>
+
+        <!-- Gráfico de barras a nivel local (Manizales) -->
+        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Manizales</h3>
+        <div class="chart-container">
+          <canvas id="manizalesChart"></canvas>
+        </div>
       </section>
     </main>
 
@@ -115,6 +152,91 @@
         <p class="dev libre-baskerville-bold">Desarrollado por grupo JEDD</p>
       </div>
     </footer>
+
+    <!-- Script para los gráficos -->
+    <script>
+      // Datos para el gráfico mundial
+      const worldData = {
+        labels: ['Europa', 'Asia', 'África', 'América', 'Oceanía'],
+        datasets: [{
+          label: 'Víctimas (millones)',
+          data: [12, 18, 30, 25, 5],
+          backgroundColor: 'rgba(102, 204, 255, 0.7)',
+          borderColor: 'rgba(0, 102, 204, 1)',
+          borderWidth: 1
+        }]
+      };
+
+      // Datos para el gráfico Colombia
+      const colombiaData = {
+        labels: ['Desplazados', 'Heridos', 'Muertos', 'Desaparecidos'],
+        datasets: [{
+          label: 'Víctimas (millones)',
+          data: [7.5, 0.5, 0.26, 0.12],
+          backgroundColor: 'rgba(255, 153, 51, 0.7)',
+          borderColor: 'rgba(255, 102, 0, 1)',
+          borderWidth: 1
+        }]
+      };
+
+      // Datos para el gráfico Manizales
+      const manizalesData = {
+        labels: ['Desplazados', 'Heridos', 'Muertos', 'Desaparecidos'],
+        datasets: [{
+          label: 'Víctimas',
+          data: [1200, 80, 40, 15],
+          backgroundColor: 'rgba(51, 204, 51, 0.7)',
+          borderColor: 'rgba(0, 153, 51, 1)',
+          borderWidth: 1
+        }]
+      };
+
+      // Crear gráficos con Chart.js
+      const ctxWorld = document.getElementById('worldChart').getContext('2d');
+      new Chart(ctxWorld, {
+        type: 'bar',
+        data: worldData,
+        options: {
+          responsive: true,  // Hace que el gráfico sea responsivo
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      const ctxColombia = document.getElementById('colombiaChart').getContext('2d');
+      new Chart(ctxColombia, {
+        type: 'bar',
+        data: colombiaData,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      const ctxManizales = document.getElementById('manizalesChart').getContext('2d');
+      new Chart(ctxManizales, {
+        type: 'bar',
+        data: manizalesData,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
 
     <!-- Scripts para el menú -->
     <script src="../../assets/js/menu.js"></script>
