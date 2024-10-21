@@ -199,3 +199,61 @@ header {
 .hipervinculosHambRedes a:hover::after {
     width: 100%; 
 }
+
+/* Media Queries para hacer el diseño responsivo */
+
+/* Para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    header {
+        height: 70px; /* Ajusta la altura para pantallas pequeñas */
+    }
+
+    .logo img {
+        height: 40px; /* Reduce el tamaño del logo */
+    }
+
+    #menu-toggle {
+        font-size: 30px; /* Reduce el tamaño del menú hamburguesa */
+    }
+
+    /* Ajusta el tamaño de las fuentes en el menú para pantallas pequeñas */
+    .hipervinculosHambHeader a {
+        font-size: 2.5rem; 
+    }
+
+    .hipervinculosHambRedes a {
+        font-size: 1rem; 
+    }
+
+    .logoHambHeader img {
+        height: 80px; /* Reduce el tamaño del logo en el menú desplegable */
+    }
+}
+
+/* Para pantallas de hasta 480px (móviles) */
+@media (max-width: 480px) {
+    header {
+        height: 60px; /* Ajusta aún más la altura para móviles pequeños */
+    }
+
+    .logo img {
+        height: 35px; /* Reduce aún más el tamaño del logo */
+    }
+
+    #menu-toggle {
+        font-size: 28px; /* Ajusta el tamaño del icono del menú */
+    }
+
+    /* Ajusta el tamaño de las fuentes en el menú para móviles pequeños */
+    .hipervinculosHambHeader a {
+        font-size: 2rem; 
+    }
+
+    .hipervinculosHambRedes a {
+        font-size: 0.9rem; 
+    }
+
+    .logoHambHeader img {
+        height: 70px; /* Reduce aún más el tamaño del logo en el menú desplegable */
+    }
+}
