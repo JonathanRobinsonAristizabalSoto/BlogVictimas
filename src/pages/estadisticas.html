@@ -60,25 +60,43 @@
     <!-- main -->
     <main>
       <section>
-        <h2 class="libre-baskerville-bold">Estadísticas del Conflicto Armado</h2>
+        <h2 class="libre-baskerville-bold">
+          Estadísticas del Conflicto Armado
+        </h2>
         <p class="libre-baskerville-regular">
-          A continuación se presentan estadísticas sobre víctimas del conflicto armado a nivel mundial, nacional (Colombia) y local (Manizales).
+          A continuación se presentan estadísticas sobre víctimas del conflicto
+          armado a nivel mundial, nacional (Colombia) y local (Manizales).
         </p>
+      </section>
+
+      <section>
 
         <!-- Gráfico de barras a nivel mundial -->
-        <h3 class="libre-baskerville-bold">Víctimas del conflicto a Nivel Mundial</h3>
+        <h3 class="libre-baskerville-bold">
+          Víctimas del conflicto a Nivel Mundial
+        </h3>
         <div class="chart-container">
           <canvas id="worldChart"></canvas>
         </div>
+      </section>
+      <section>
 
         <!-- Gráfico de barras a nivel nacional (Colombia) -->
-        <h3 class="libre-baskerville-bold">Víctimas del conflicto en Colombia</h3>
+        <h3 class="libre-baskerville-bold">
+          Víctimas del conflicto en Colombia
+        </h3>
         <div class="chart-container">
           <canvas id="colombiaChart"></canvas>
         </div>
+      
+      </section>
+
+      <section>
 
         <!-- Gráfico de barras a nivel local (Manizales) -->
-        <h3 class="libre-baskerville-bold">Víctimas del conflicto en Manizales</h3>
+        <h3 class="libre-baskerville-bold">
+          Víctimas del conflicto en Manizales
+        </h3>
         <div class="chart-container">
           <canvas id="manizalesChart"></canvas>
         </div>
@@ -128,7 +146,7 @@
       </div>
       <div class="footer-bottom">
         <p class="libre-baskerville-regular">
-            &copy; 2024 Conflicto Armado. Todos los derechos reservados.
+          &copy; 2024 Conflicto Armado. Todos los derechos reservados.
         </p>
         <p class="dev libre-baskerville-bold">Desarrollado por grupo JEDD</p>
       </div>
@@ -138,84 +156,111 @@
     <script>
       // Datos para el gráfico mundial
       const worldData = {
-        labels: ['Europa', 'Asia', 'África', 'América', 'Oceanía'],
-        datasets: [{
-          label: 'Víctimas (millones)',
-          data: [12, 18, 30, 25, 5],
-          backgroundColor: 'rgba(102, 204, 255, 0.7)',
-          borderColor: 'rgba(0, 102, 204, 1)',
-          borderWidth: 1
-        }]
+        labels: ["Europa", "Asia", "África", "América", "Oceanía"],
+        datasets: [
+          {
+            label: "Víctimas (millones)",
+            data: [12, 18, 30, 25, 5],
+            backgroundColor: "rgba(102, 204, 255, 0.7)",
+            borderColor: "rgba(0, 102, 204, 1)",
+            borderWidth: 1,
+          },
+        ],
       };
 
       // Datos para el gráfico Colombia
       const colombiaData = {
-        labels: ['Desplazados', 'Heridos', 'Muertos', 'Desaparecidos'],
-        datasets: [{
-          label: 'Víctimas (millones)',
-          data: [7.5, 0.5, 0.26, 0.12],
-          backgroundColor: 'rgba(255, 153, 51, 0.7)',
-          borderColor: 'rgba(255, 102, 0, 1)',
-          borderWidth: 1
-        }]
+        labels: ["Desplazados", "Heridos", "Muertos", "Desaparecidos"],
+        datasets: [
+          {
+            label: "Víctimas (millones)",
+            data: [7.5, 0.9, 0.5, 2],
+            backgroundColor: "rgba(255, 153, 51, 0.7)",
+            borderColor: "rgba(255, 102, 0, 1)",
+            borderWidth: 1,
+          },
+        ],
       };
 
       // Datos para el gráfico Manizales
       const manizalesData = {
-        labels: ['Desplazados', 'Heridos', 'Muertos', 'Desaparecidos'],
-        datasets: [{
-          label: 'Víctimas',
-          data: [1200, 80, 40, 15],
-          backgroundColor: 'rgba(51, 204, 51, 0.7)',
-          borderColor: 'rgba(0, 153, 51, 1)',
-          borderWidth: 1
-        }]
+        labels: ["Desplazados", "Heridos", "Muertos", "Desaparecidos"],
+        datasets: [
+          {
+            label: "Víctimas",
+            data: [1200, 120, 40, 87],
+            backgroundColor: "rgba(51, 204, 51, 0.7)",
+            borderColor: "rgba(0, 153, 51, 1)",
+            borderWidth: 1,
+          },
+        ],
       };
 
       // Crear gráficos con Chart.js
-      const ctxWorld = document.getElementById('worldChart').getContext('2d');
+      const ctxWorld = document.getElementById("worldChart").getContext("2d");
       new Chart(ctxWorld, {
-        type: 'bar',
+        type: "bar",
         data: worldData,
         options: {
-          responsive: true,  // Hace que el gráfico sea responsivo
+          responsive: true, // Hace que el gráfico sea responsivo
           maintainAspectRatio: false,
           scales: {
             y: {
-              beginAtZero: true
-            }
-          }
-        }
+              beginAtZero: true,
+              ticks: {
+                stepSize: 1, // Ajusta este valor según sea necesario
+                min: 0, // Valor mínimo
+                max: 40, // Valor máximo del eje Y
+              },
+            },
+          },
+        },
       });
 
-      const ctxColombia = document.getElementById('colombiaChart').getContext('2d');
+      const ctxColombia = document
+        .getElementById("colombiaChart")
+        .getContext("2d");
       new Chart(ctxColombia, {
-        type: 'bar',
+        type: "bar",
         data: colombiaData,
         options: {
           responsive: true,
           maintainAspectRatio: false,
           scales: {
             y: {
-              beginAtZero: true
-            }
-          }
-        }
+              beginAtZero: true,
+              ticks: {
+                stepSize: 0.5, // Ajusta este valor según sea necesario
+                min: 0, // Valor mínimo
+                max: 10, // Valor máximo del eje Y
+              },
+            },
+          },
+        },
       });
 
-      const ctxManizales = document.getElementById('manizalesChart').getContext('2d');
+      // Crear gráfico de Manizales con Chart.js
+      const ctxManizales = document
+        .getElementById("manizalesChart")
+        .getContext("2d");
+
       new Chart(ctxManizales, {
-        type: 'bar',
+        type: "bar",
         data: manizalesData,
         options: {
           responsive: true,
           maintainAspectRatio: false,
           scales: {
             y: {
-              beginAtZero: true
-            }
-          }
-        }
+              beginAtZero: true,
+              ticks: {
+                stepSize: 100, // Paso entre los valores del eje Y
+                min: 0, // Valor mínimo
+                max: 1200, // Valor máximo del eje Y
+              },
+            },
+          },
+        },
       });
     </script>
 
