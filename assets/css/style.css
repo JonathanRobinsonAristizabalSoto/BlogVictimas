@@ -27,6 +27,10 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
 section {
     margin-bottom: 40px;
     padding: 60px;
@@ -68,6 +72,12 @@ span {
     border-radius: 8px;
 }
 
+/* Asegurando que los gráficos sean responsivos */
+canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
 /* Media Queries para dispositivos móviles */
 @media (max-width: 1024px) {
     main {
@@ -77,12 +87,17 @@ span {
     section {
         margin: 20px;
         margin-bottom: 30px;
-        padding: 30px;
+        padding: 20px;
     }
 
     section h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
+
+    h3 {
+        font-size: 1rem;
+    }
+    
 
     section p {
         font-size: 0.95rem;
@@ -95,12 +110,17 @@ span {
 
 @media (max-width: 768px) {
     section h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     section p {
         font-size: 0.9rem;
     }
+
+    h3 {
+        font-size: 1rem;
+    }
+    
 
     span {
         font-size: 1rem;
@@ -109,11 +129,16 @@ span {
 
 @media (max-width: 480px) {
     section h2 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
+    h3 {
+        font-size: 0.9rem;
+    }
+    
+
     section p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     span {

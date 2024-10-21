@@ -25,25 +25,6 @@
 
     <!-- librería Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <style>
-      /* Asegurando que los gráficos sean responsivos */
-      canvas {
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* Ajustes adicionales para móviles */
-      @media (max-width: 768px) {
-        h2, h3 {
-          font-size: 1.5em;
-        }
-
-        p {
-          font-size: 1em;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -85,19 +66,19 @@
         </p>
 
         <!-- Gráfico de barras a nivel mundial -->
-        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Nivel Mundial</h3>
+        <h3 class="libre-baskerville-bold">Víctimas del conflicto a Nivel Mundial</h3>
         <div class="chart-container">
           <canvas id="worldChart"></canvas>
         </div>
 
         <!-- Gráfico de barras a nivel nacional (Colombia) -->
-        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Colombia</h3>
+        <h3 class="libre-baskerville-bold">Víctimas del conflicto en Colombia</h3>
         <div class="chart-container">
           <canvas id="colombiaChart"></canvas>
         </div>
 
         <!-- Gráfico de barras a nivel local (Manizales) -->
-        <h3 class="libre-baskerville-bold">Víctimas del Conflicto - Manizales</h3>
+        <h3 class="libre-baskerville-bold">Víctimas del conflicto en Manizales</h3>
         <div class="chart-container">
           <canvas id="manizalesChart"></canvas>
         </div>

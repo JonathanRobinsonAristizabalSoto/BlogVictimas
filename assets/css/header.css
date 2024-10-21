@@ -241,12 +241,13 @@ header {
         height: 60px; /* Ajusta aún más la altura para móviles pequeños */
     }
 
+
     .logo img {
-        height: 40px; /* Reduce aún más el tamaño del logo */
+        height: 45px; /* Reduce aún más el tamaño del logo */
     }
 
     #menu-toggle {
-        font-size: 28px; /* Ajusta el tamaño del icono del menú */
+        font-size: 35px; /* Ajusta el tamaño del icono del menú */
     }
 
     /* Ajusta el tamaño de las fuentes en el menú para móviles pequeños */
