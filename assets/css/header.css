@@ -14,6 +14,7 @@ header {
     padding: 10px;
     background-color: var(--blanco); 
     height: 90px; /* Ajusta esta altura según sea necesario */
+    position: relative;
 }
 
 /* Estilos para el logo */
@@ -21,12 +22,12 @@ header {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    margin: 0 auto; /* Centra el logo horizontalmente en su contenedor */
+    position: absolute; /* El logo queda fijo en el centro */
+    left: 50%;
+    transform: translateX(-50%); /* Lo centra horizontalmente respecto al contenedor */
 }
 
 .logo img {
-    display: flex;
-    margin: 0 auto;
     height: 50px; 
 }
 
@@ -34,6 +35,7 @@ header {
 .menu-hamburguesa {
     display: flex; 
     align-items: center; /* Centra verticalmente el botón */
+    margin: 30px;
 }
 
 #menu-toggle {
@@ -240,7 +242,7 @@ header {
     }
 
     .logo img {
-        height: 35px; /* Reduce aún más el tamaño del logo */
+        height: 40px; /* Reduce aún más el tamaño del logo */
     }
 
     #menu-toggle {
@@ -258,5 +260,11 @@ header {
 
     .logoHambHeader img {
         height: 70px; /* Reduce aún más el tamaño del logo en el menú desplegable */
+    }
+
+    .menu-hamburguesa {
+        display: flex; 
+        align-items: center; /* Centra verticalmente el botón */
+        margin: 10px;
     }
 }
