@@ -1,51 +1,201 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f8f8f8;
+:root {
+    --negro-profundo: #121212;  
+    --verde-oscuro: #067f3e;    
+    --amarillo: #e6a500;  
+    --gris-claro: #9d9d9d;      
+    --blanco: #ffffff;          
 }
 
+/* Estilos generales para el header */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    align-items: center; 
+    padding: 10px;
+    background-color: var(--blanco); 
+    height: 90px; /* Ajusta esta altura según sea necesario */
+}
+
+/* Estilos para el logo */
+.logo {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; /* Centra el logo horizontalmente en su contenedor */
+}
+
+.logo img {
+    height: 50px; 
+}
+
+/* Estilos para el menú hamburguesa */
 .menu-hamburguesa {
-    position: relative;
+    display: flex; 
+    align-items: center; /* Centra verticalmente el botón */
 }
 
 #menu-toggle {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 36px; 
     cursor: pointer;
+    position: relative;
+    z-index: 1001; 
+    color: var(--negro-profundo); 
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
+#menu-toggle:focus {
+    color: var(--blanco); 
+}
+
+#menu-toggle:active {
+    transform: scale(1.2); 
+}
+
+/* Estilos para el menú desplegable */
 #menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Inicialmente oculto */
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    top: 0;
     left: 0;
-    background: white;
-    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%; 
+    background: var(--negro-profundo); 
+    z-index: 1000; 
+    overflow: hidden;
+    transform: translateY(-100%); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-#menu li {
-    padding: 10px;
+#menu.show {
+    transform: translateY(0); 
+    opacity: 1; 
+    visibility: visible; 
 }
 
-#menu li a {
+/* Estilos para el título en el menú */
+.logoHambHeader {
+    transform: translateY(-20px); 
+    transition: transform 1.3s ease, opacity 1.3s ease; 
+    opacity: 0; 
+}
+
+.logoHambHeader img {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    height: 100px;
+}
+
+#menu.show .logoHambHeader {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+/* Estilos para los hipervínculos del menú */
+.hipervinculosHambHeader {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transform: translateY(-20px); 
+    transition: transform 0.9s ease 0.9s, opacity 0.9s ease; 
+    opacity: 0; 
+}
+
+#menu.show .hipervinculosHambHeader {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.hipervinculosHambHeader li {
+    margin: 10px 0; 
+    position: relative; 
+    transition: transform 0.3s ease; 
+}
+
+.hipervinculosHambHeader a {
     text-decoration: none;
-    color: black;
+    color: var(--blanco); 
+    font-size: 4rem; 
+    position: relative; 
 }
 
-.hidden {
-    display: none; /* Clase para ocultar */
+.hipervinculosHambHeader a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--amarillo); 
+    position: absolute;
+    left: 50%; 
+    bottom: -5px; 
+    transform: translateX(-50%); 
+    transform-origin: center; 
+    width: 0; 
+    transition: width 0.4s ease-out; 
 }
 
-.logo img {
-    height: 40px;
+.hipervinculosHambHeader a:hover::after {
+    width: 100%; 
 }
 
-.idioma select {
-    padding: 5px;
+/* Estilos para los hipervínculos de redes sociales */
+.hipervinculosHambRedes {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    transform: translateY(-20px); 
+    transition: transform 0.8s ease 0.9s, opacity 0.9s ease; 
+    opacity: 0; 
+}
+
+#menu.show .hipervinculosHambRedes {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.hipervinculosHambRedes li {
+    margin: 0 15px; 
+    position: relative; 
+}
+
+.hipervinculosHambRedes a {
+    display: flex;
+    margin-top: 100px; 
+    text-decoration: none;
+    color: var(--amarillo); 
+    font-size: 1.2rem; 
+    position: relative; 
+}
+
+.hipervinculosHambRedes a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--verde-oscuro); 
+    position: absolute;
+    left: 50%; 
+    bottom: -5px; 
+    transform: translateX(-50%); 
+    transform-origin: center; 
+    width: 0; 
+    transition: width 0.4s ease-out; 
+}
+
+.hipervinculosHambRedes a:hover::after {
+    width: 100%; 
 }

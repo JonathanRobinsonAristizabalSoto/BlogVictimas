@@ -1,0 +1,87 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
+
+/* ________________________________________________________________________________________________________________________________________________________________ */
+
+/* Fuentes recomendadas para el sitio web */
+
+/* 1. Montserrat - Usada para títulos y encabezados */
+.montserrat-600 {
+  font-family: "Montserrat", sans-serif; /* Fuente sans-serif moderna */
+  font-weight: 600; /* Peso bold para títulos */
+  font-style: normal; /* Estilo normal */
+}
+
+/* 2. Libre Baskerville - Usada para párrafos y citas */
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif; /* Fuente serif elegante */
+  font-weight: 400; /* Peso regular para párrafos */
+  font-style: normal; /* Estilo normal */
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif; /* Uso en títulos o énfasis */
+  font-weight: 700; /* Peso bold para énfasis */
+  font-style: normal; /* Estilo normal */
+}
+
+/* 3. Questrial - Usada para subtítulos o texto secundario */
+.questrial-regular {
+  font-family: "Questrial", sans-serif; /* Fuente sans-serif moderna */
+  font-weight: 400; /* Peso regular */
+  font-style: normal; /* Estilo normal */
+}
+
+/* ________________________________________________________________________________________________________________________________________________________________ */
+
+/* Variaciones de Montserrat */
+.montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100; /* Peso muy ligero */
+  font-style: normal;
+}
+
+.montserrat-200 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200; /* Peso ligero */
+  font-style: normal;
+}
+
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300; /* Peso medio-ligero */
+  font-style: normal;
+}
+
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Peso normal */
+  font-style: normal;
+}
+
+.montserrat-500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Peso medio */
+  font-style: normal;
+}
+
+.montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Peso bold */
+  font-style: normal;
+}
+
+.montserrat-800 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800; /* Peso negrita fuerte */
+  font-style: normal;
+}
+
+.montserrat-900 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900; /* Peso extra-bold */
+  font-style: normal;
+}
+
+/* ________________________________________________________________________________________________________________________________________________________________ */
+

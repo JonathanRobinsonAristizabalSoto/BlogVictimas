@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css">
     <title>Blog Víctimas</title>
     <script src="assets/js/jquery.min.js"></script>
-</head>
-<body>
-    <!-- header -->
+  </head>
+  <body>
+    <header>
+      <div class="menu-hamburguesa">
+          <button id="menu-toggle">&#9776;</button>
+          <ul id="menu" class="hidden">
+              <div class="menu-container">
+                  <div class="logoHambHeader">
+                      <img src="./assets/images/logo2.png" alt="">
+                  </div>
+                  <div class="hipervinculosHambHeader subtitle">
+                      <li><a href="./src/pages/historia.html">Historia</a></li>
+                      <li><a href="./src/pages/estadisticas.html">Estadisticas</a></li>
+                      <li><a href="./src/pages/causas.html">Causas</a></li>
+                      <li><a href="./src/pages/normas.html">Normas</a></li>
+                      <li><a href="./src/pages/casos.html">Casos</a></li>
+                  </div>
+                  <div class="hipervinculosHambRedes title">
+                      <li><a href="#">FACEBOOK</a></li>
+                      <li><a href="#">INSTAGRAM</a></li>
+                      <li><a href="#">TICTOK</a></li>
+                  </div>
+              </div>
+          </ul>
+      </div>
+      <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo" />
+      </div>
+      
+  </header>
+  
+
+    <!-- Contenido principal del blog -->
     <section>
-        <div include-html="./src/includes/header.html"></div>
-    </section>
-    <!-- contenido blog -->
-    <section>
-        <h2>Introducción</h2>
-        <p>Este blog tiene como objetivo visibilizar las historias de las víctimas del conflicto armado y promover la reparación integral.</p>
-    </section>
-    <!-- footer -->
-    <section>
-        <div include-html="./src/includes/footer.html"></div>
+      <h2>Introducción</h2>
+      <p>
+        Este blog tiene como objetivo visibilizar las historias de las víctimas
+        del conflicto armado y promover la reparación integral.
+      </p>
     </section>
 
-    <script src="assets/js/includehtml.js"></script>
+    <!-- Sección del footer cargado directamente -->
+    <footer>
+      <p>Este es el footer de tu sitio web.</p>
+    </footer>
+
+    <!-- Scripts para el menú -->
     <script src="assets/js/menu.js"></script>
-</body>
+  </body>
 </html>
