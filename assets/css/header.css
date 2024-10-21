@@ -25,6 +25,8 @@ header {
 }
 
 .logo img {
+    display: flex;
+    margin: 0 auto;
     height: 50px; 
 }
 
@@ -90,6 +92,7 @@ header {
 }
 
 .logoHambHeader img {
+    display: flex;
     margin: 0 auto;
     margin-bottom: 60px;
     height: 100px;
