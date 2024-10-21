@@ -2,7 +2,7 @@
     --negro-profundo: #161616;  
     --verde-oscuro: #067f3e;    
     --amarillo: #e6a500;  
-    --gris-claro: #9d9d9d;      
+    --gris-claro: #dfdfdf;      
     --blanco: #ffffff;          
 }
 
@@ -12,8 +12,7 @@ footer {
     padding: 10px 0;
     font-family: Arial, sans-serif;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    /* No es necesario usar position absolute */
 }
 
 .footer-container {
