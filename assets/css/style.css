@@ -80,6 +80,11 @@ canvas {
     height: 250px; /* Altura ajustada para los gráficos */
   }
 
+.textvideo{
+    text-align: center;
+    font-weight: bold;
+    color: var(--verde-oscuro);
+}
 /* Media Queries para dispositivos móviles */
 @media (max-width: 1024px) {
     main {
