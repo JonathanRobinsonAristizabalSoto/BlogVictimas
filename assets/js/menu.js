@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetMenu() {
         // Resetea el contenedor del menú, los enlaces de redes, los enlaces del menú y el título
         titulo.style.opacity = 0; // Hace invisible el título
-        titulo.style.transform = 'translateY(-1300px)'; // Resetea la posición del título
+        titulo.style.transform = 'translateY(-1000px)'; // Resetea la posición del título
 
         enlacesMenu.style.opacity = 0; // Hace invisibles los enlaces del menú
-        enlacesMenu.style.transform = 'translateY(-900px)'; // Resetea la posición de los enlaces del menú
+        enlacesMenu.style.transform = 'translateY(-800px)'; // Resetea la posición de los enlaces del menú
         
         enlacesRedes.style.opacity = 0; // Hace invisibles los enlaces de redes
         enlacesRedes.style.transform = 'translateY(0px)'; // Resetea la posición de los enlaces de redes
