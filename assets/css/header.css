@@ -132,7 +132,7 @@ header {
 .hipervinculosHambHeader a {
     text-decoration: none;
     color: var(--blanco); 
-    font-size: 4rem; 
+    font-size: 3rem; 
     position: relative; 
 }
 
