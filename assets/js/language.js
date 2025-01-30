@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Establecer el idioma de origen
         var sourceLang = selectedLanguage === "en" ? "es" : "en";
 
-        // Traducir título y contenido
+        // Traducir tItulo y contenido
         translateText(titleText, sourceLang, selectedLanguage, 'title');
         translateText(contentText, sourceLang, selectedLanguage, 'content');
     });
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function translateText(text, sourceLang, targetLang, type) {
         if (!text) {
             console.error("No hay texto para traducir.");
-            return; // No hacer nada si el texto está vacío
+            return;
         }
 
-        console.log('Texto a traducir:', text); // Verificar el texto que se envía
+        console.log('Texto a traducir:', text);
 
         fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=YOUR_API_KEY&text=${encodeURIComponent(text)}&lang=${sourceLang}-${targetLang}`)
         .then(response => response.json())
